@@ -1,0 +1,19 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 20px;
+    background-color: #f8f9fa; /* or any base color you prefer */
+    position: relative;        /* needed for the pseudo-element positioning */
+}
+
+body::after {
+    content: "";
+    background: url('../images/meditation_scene.png') center/cover no-repeat;
+    position: fixed;   /* or absolute, but fixed ensures it covers the whole viewport */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.1;      /* Adjust this value to make the image more/less faint */
+    z-index: -1;       /* Place behind the body content */
+}
