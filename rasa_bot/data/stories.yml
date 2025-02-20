@@ -1,0 +1,10 @@
+version: "3.1"
+
+stories:
+- story: User provides information
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: provide_info
+  - action: user_info_form
+  - active_loop: user_info_form

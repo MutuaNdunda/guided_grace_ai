@@ -1,0 +1,17 @@
+version: "3.1"
+
+rules:
+- rule: Start user info form
+  steps:
+  - intent: provide_info
+  - action: user_info_form
+  - active_loop: user_info_form
+
+- rule: Submit user info form
+  condition:
+  - active_loop: user_info_form
+  steps:
+  - action: user_info_form
+  - active_loop: null
+  - action: utter_submit
+  - action: action_listen  # Ensure the bot stops listening properly
